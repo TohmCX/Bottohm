@@ -36,7 +36,7 @@ async def permtest(ctx):
     if ctx.author.id != OWNER_ID:
         await ctx.send("Nah cuh u aint got no permission")
         return
-    await ctx.send("Yeah cuh u rock")
+    await ctx.send("Yeah cuh u rock, ok garmin explode him")
 @bot.command()
 
 async def gay(ctx, target: discord.Member):
@@ -1059,4 +1059,7 @@ async def on_ready():
 
 # ----------------------
 
-bot.run("MTQxNzUxNTc5MDk5OTIyODQ2Ng.GbrM8A.zRX2a-ejDVdNVdwwZJhARA17RwRjg78u0Nx2pQ")
+import config  # import your local config file
+
+# Run bot with token from config
+bot.run(config.DISCORD_TOKEN)
